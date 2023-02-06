@@ -1,0 +1,90 @@
+
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.formulario{
+    margin-bottom: 5rem ;
+    &__grid{
+        @include m.tablet { 
+            // align-items: center;
+        @include m.grid(2,5rem)
+        
+        }
+    }
+
+    &__contenido{
+        margin-top: 3rem;
+        background-color: v.$primario;
+        padding: 3rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__heading{
+        color: v.$blanco;
+        text-align: center;
+        
+    }
+
+    &__campo{
+        margin-bottom: 1rem;
+    }
+
+    &__label{
+        display: block;
+        text-transform: uppercase;
+        color: v.$blanco;
+        margin: 1rem 0;    
+    }
+
+    &__label2{
+        display: block;
+        text-transform: uppercase;
+        color: v.$blanco;
+        margin: 3rem 0 2rem 0;   
+    }
+
+    &__place{
+        display: flex;
+    }
+
+    &__input{
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-radius: 5rem;
+    }
+
+    &__location{
+        margin: 0 2rem 0 2rem;
+        @include m.boton(v.$font,v.$blanco);
+        @include m.tablet { 
+            width: 100%;
+         }
+    }
+    
+    &__submit{
+        margin-top: 2rem;
+        @include m.boton(v.$terciario,v.$blanco);
+        @include m.tablet { 
+            width: 100%;
+         }
+    }
+
+    &__imagen-contenedor{
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        @include m.tablet { 
+            margin-top: 3rem;
+            
+        }
+    }
+    
+    &__imagen{ 
+        border-radius: 1rem;
+        background-size:auto;
+    }
+}

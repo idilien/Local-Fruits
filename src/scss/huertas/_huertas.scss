@@ -1,0 +1,20 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.huertas{
+    background-color: v.$font2;
+    padding: 2rem 0;
+    
+    
+    &__heading{
+        color: v.$blanco;
+        text-align: center;
+    }
+    
+    &__grid{
+        @include m.tablet { 
+            @include m.grid(2,0rem);   
+          
+         }
+    }
+}
